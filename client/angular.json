@@ -5,7 +5,12 @@
   "projects": {
     "client": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:interceptor": {
+          "skipTests": true,
+          "path": "src/app/interceptors"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -28,7 +33,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-        
+
               "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/bootswatch/dist/quartz/bootstrap.min.css",
               "src/styles.css",

@@ -5,10 +5,11 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { authGuard } from './_guards/auth.guard';
+import { TestErrors } from './features/test-errors/test-errors.component';
 
 
 export const routes: Routes = [
-    {path: '', component: HomeComponent}, 
+    {path: '', component: HomeComponent},
     {
         path: '',
         runGuardsAndResolvers:'always',
@@ -20,6 +21,6 @@ export const routes: Routes = [
     {path: 'messages', component: MessagesComponent},
         ]
     },
-    
+    {path: 'errors', component: TestErrors},
     {path: '**', component: HomeComponent, pathMatch: 'full'},
 ];
