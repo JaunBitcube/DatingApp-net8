@@ -13,7 +13,7 @@ public static class ApplicationServiceExtension
         services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         services.AddEndpointsApiExplorer();
-        services.AddDbContext<DataContext>(opt =>
+        services.AddDbContext<AppDbContext>(opt =>
         {
             opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
         });
